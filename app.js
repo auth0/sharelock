@@ -10,7 +10,8 @@ var express = require('express')
     , logger = require('./logger')
     , crypto = require('crypto')
     , base64url = require('base64url')
-    , cryptiles = require('cryptiles');
+    , cryptiles = require('cryptiles')
+    , moment = require('moment');
 
 var keys = {};
 
@@ -219,6 +220,8 @@ function current_create() {
             req.body.d = req.query.d;
         if (!req.body.a)
             req.body.a = req.query.a;
+        if (!req.body.t)
+            req.body.t = req.query.t || process.env.DEFAULT_SECONDS_TIMEOUT;
         if (typeof req.body.d !== 'string' || req.body.d.length === 0)
             return res.status(400).send('Missing data to secure. Use `d` parameter.');
         if (req.body.d.length > 500)
@@ -232,6 +235,13 @@ function current_create() {
             d: req.body.d,
             a: []
         };
+
+        if(typeof req.body.t !== 'undefined' && parseInt(req.body.t) > 0) {
+            resource.e = {
+                d: moment(new Date()).format('X'),
+                t: req.body.t
+            };
+        }
 
         var tokens = req.body.a.split(/[\ \n\,\r]/);
         for (var i in tokens) {
@@ -353,6 +363,18 @@ function v1_get() {
         }
         catch (e) {
             return res.render('invalid', { details: 'Encrypted data is malformed.' });
+        }
+
+        // for backward compatibility 
+        if(typeof resource.e !== 'undefined') {
+            try {
+                if( typeof resource.e !== 'object' || typeof resource.e.d !== 'string' 
+                    || typeof resource.e.t !== 'string' 
+                    || moment(new Date()).diff(moment.unix(resource.e.d), 'seconds') > parseInt(resource.e.t))
+                    throw null;
+            } catch(e) {
+                return res.render('invalid', { details: 'Encrypted data has expired.' });
+            }
         }
 
         var allowed;
