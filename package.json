@@ -34,7 +34,7 @@
     "cryptiles": "^2.0.4",
     "dotenv": "^0.4.0",
     "ejs": "~0.8.5",
-    "express": "~4.9.0",
+    "express": "4.12.4",
     "express-session": "^1.9.3",
     "passport": "^0.2.1",
     "passport-auth0": "^0.2.0",
