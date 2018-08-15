@@ -46,16 +46,14 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 <script type="text/javascript">
 $(function () {
-  var copy_client = new ZeroClipboard(document.getElementById('copy'));
+  var copy_client = new ClipboardJS(document.getElementById('copy'));
 
-  copy_client.on( "ready", function( readyEvent ) {
-    copy_client.on( "aftercopy", function( event ) {
-      $(event.target).find('.copy_text').text('Copied');
-    } );
-  } );
+  copy_client.on("success", function(event) {
+    $(event.trigger).find('.copy_text').text('Copied');
+  });
 
   $('.link.sharelock').attr('href', location.href);
   $('.link.sharelock').text(location.href);

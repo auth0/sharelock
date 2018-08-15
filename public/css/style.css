@@ -601,15 +601,6 @@ img{
   border-radius: 50px;
 }
 
-a.zeroclipboard-is-hover{
-  color: white;
-  text-decoration: none;
-}
-
-.data .sharelocked-date .clipboard a.zeroclipboard-is-hover i{
-  background-image: url(../images/ico_data_hover.svg) ;
-}
-
 .mobile-con {
   display: none;
 }
