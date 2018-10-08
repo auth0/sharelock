@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>Fill 243</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="4" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="16px" sketch:type="MSLayerGroup" stroke-width="4" transform="translate(-135.000000, -3175.000000)" fill="#EB5424">
-            <g id="Group-853" stroke-width="4" transform="translate(1.000000, 1.000000)" sketch:type="MSShapeGroup">
-                <path d="M141.357,3179.64 C141.311,3179.6 141.256,3179.56 141.199,3179.54 L135.317,3174.14 C135.131,3173.96 134.829,3173.96 134.643,3174.14 C134.457,3174.33 134.457,3174.63 134.643,3174.82 L140.294,3180 L134.644,3185.18 C134.458,3185.37 134.458,3185.67 134.644,3185.86 C134.83,3186.04 135.131,3186.04 135.317,3185.86 L141.199,3180.46 C141.256,3180.44 141.31,3180.4 141.356,3180.36 C141.454,3180.26 141.498,3180.13 141.492,3180 C141.498,3179.87 141.456,3179.74 141.357,3179.64" id="Fill-243"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg height="12" viewBox="0 0 8 12" width="8" xmlns="http://www.w3.org/2000/svg"><path d="m141.357 3179.64c-.046-.04-.101-.08-.158-.1l-5.882-5.4c-.186-.18-.488-.18-.674 0-.186.19-.186.49 0 .68l5.651 5.18-5.65 5.18c-.186.19-.186.49 0 .68.186.18.487.18.673 0l5.882-5.4c.057-.02.111-.06.157-.1.098-.1.142-.23.136-.36.006-.13-.036-.26-.135-.36" fill="#eb5424" fill-rule="evenodd" transform="translate(-134 -3174)"/></svg>

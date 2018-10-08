@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW X6 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="43mm" height="53mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 4300 5300"
- xmlns:xlink="http://www.w3.org/1999/xlink">
- <defs>
-  <style type="text/css">
-   <![CDATA[
-    .fil0 {fill:#A9B2BB}
-   ]]>
-  </style>
- </defs>
- <g id="Camada_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0" d="M4162 1813c-236,-318 -526,-466 -848,-512 -389,-56 -650,83 -880,166 -134,48 -258,78 -391,39 -218,-64 -481,-210 -745,-206 -211,4 -480,52 -703,242 -183,155 -320,319 -418,496 -338,616 -140,1651 171,2239 263,497 577,938 911,1002 223,43 380,-29 575,-113 204,-87 460,-124 674,-53 386,128 679,349 1122,-86 316,-311 555,-821 670,-1141 -885,-354 -952,-1598 -138,-2074zm-2021 -587c-51,-670 523,-1172 1061,-1217 49,737 -568,1240 -1061,1217z"/>
- </g>
-</svg>
+<svg clip-rule="evenodd" fill-rule="evenodd" height="53mm" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 4300 5300" width="43mm" xmlns="http://www.w3.org/2000/svg"><path d="m4162 1813c-236-318-526-466-848-512-389-56-650 83-880 166-134 48-258 78-391 39-218-64-481-210-745-206-211 4-480 52-703 242-183 155-320 319-418 496-338 616-140 1651 171 2239 263 497 577 938 911 1002 223 43 380-29 575-113 204-87 460-124 674-53 386 128 679 349 1122-86 316-311 555-821 670-1141-885-354-952-1598-138-2074zm-2021-587c-51-670 523-1172 1061-1217 49 737-568 1240-1061 1217z" fill="#a9b2bb"/></svg>

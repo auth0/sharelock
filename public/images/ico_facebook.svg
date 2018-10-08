@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="10px" height="20px" viewBox="0 0 10 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>Imported Layers</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="1---Login" sketch:type="MSArtboardGroup" transform="translate(-430.000000, -522.000000)" fill="#FFFFFF">
-            <g id="Card" sketch:type="MSLayerGroup" transform="translate(265.000000, 160.000000)">
-                <g id="Google+-+-Facebook-+-SUGGESTED-LOG-IN" transform="translate(147.000000, 297.000000)" sketch:type="MSShapeGroup">
-                    <g id="Facebook" transform="translate(0.000000, 52.000000)">
-                        <path d="M24.6666667,19.6666667 L24.6666667,17.682 C24.6666667,16.7866667 24.8646667,16.3333333 26.2553333,16.3333333 L28,16.3333333 L28,13 L25.3333333,13 C22,13 20.6666667,15.224 20.6666667,17.6666667 L20.6666667,19.6666667 L18,19.6666667 L18,23 L20.6666667,23 L20.6666667,33 L24.6666667,33 L24.6666667,23 L27.604,23 L28,19.6666667 L24.6666667,19.6666667" id="Imported-Layers"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg height="20" viewBox="0 0 10 20" width="10" xmlns="http://www.w3.org/2000/svg"><path d="m24.6666667 19.6666667v-1.9846667c0-.8953333.198-1.3486667 1.5886666-1.3486667h1.7446667v-3.3333333h-2.6666667c-3.3333333 0-4.6666666 2.224-4.6666666 4.6666667v2h-2.6666667v3.3333333h2.6666667v10h4v-10h2.9373333l.396-3.3333333z" fill="#fff" fill-rule="evenodd" transform="translate(-18 -13)"/></svg>

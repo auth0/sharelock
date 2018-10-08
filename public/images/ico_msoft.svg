@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="221px" height="221px" viewBox="0 0 221 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>Microsoft_logo_(2012)</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Microsoft_logo_(2012)" sketch:type="MSLayerGroup" fill="#ffffff">
-            <path d="M104.8675,104.8675 L0,104.8675 L0,0 L104.8675,0 L104.8675,104.8675 L104.8675,104.8675 Z" id="path5058" sketch:type="MSShapeGroup"></path>
-            <path d="M220.65375,104.8675 L115.7875,104.8675 L115.7875,0 L220.65375,0 L220.65375,104.8675 L220.65375,104.8675 Z" id="path5060" sketch:type="MSShapeGroup"></path>
-            <path d="M104.865,220.695 L0,220.695 L0,115.8275 L104.865,115.8275 L104.865,220.695 L104.865,220.695 Z" id="path5062" sketch:type="MSShapeGroup"></path>
-            <path d="M220.65375,220.695 L115.7875,220.695 L115.7875,115.8275 L220.65375,115.8275 L220.65375,220.695 L220.65375,220.695 Z" id="path5064" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
-</svg>
+<svg height="221" viewBox="0 0 221 221" width="221" xmlns="http://www.w3.org/2000/svg"><g fill="#fff" fill-rule="evenodd"><path d="m104.8675 104.8675h-104.8675v-104.8675h104.8675z"/><path d="m220.65375 104.8675h-104.86625v-104.8675h104.86625z"/><path d="m104.865 220.695h-104.865v-104.8675h104.865z"/><path d="m220.65375 220.695h-104.86625v-104.8675h104.86625z"/></g></svg>
