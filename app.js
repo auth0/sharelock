@@ -335,8 +335,8 @@ function v1_get() {
 
         try {
             tokens[0] = base64url.toBase64(tokens[0]); // signature
-            tokens[1] = new Buffer(base64url.toBase64(tokens[1]), 'base64'); // encrypted data
-            tokens[2] = new Buffer(base64url.toBase64(tokens[2]), 'base64'); // iv
+            tokens[1] = new Buffer.from(base64url.toBase64(tokens[1]), 'base64'); // encrypted data
+            tokens[2] = new Buffer.from(base64url.toBase64(tokens[2]), 'base64'); // iv
             var signature = crypto.createHmac('sha256', request_keys.signature_key).update(tokens[1]).update(tokens[2]).digest('base64');
             if (!cryptiles.fixedTimeComparison(signature, tokens[0]))
                 throw null;
@@ -477,8 +477,8 @@ function ensure_key(key_name) {
         if (!process.env['SIGNATURE_KEY_' + key_name] || !process.env['ENCRYPTION_KEY_' + key_name])
             throw new Error('Cryptographic credentials are not available.');
         keys[key_name] = {
-            signature_key: new Buffer(process.env['SIGNATURE_KEY_' + process.env.CURRENT_KEY], 'hex'),
-            encryption_key: new Buffer(process.env['ENCRYPTION_KEY_' + process.env.CURRENT_KEY], 'hex')
+            signature_key: new Buffer.from(process.env['SIGNATURE_KEY_' + process.env.CURRENT_KEY], 'hex'),
+            encryption_key: new Buffer.from(process.env['ENCRYPTION_KEY_' + process.env.CURRENT_KEY], 'hex')
         };
     }
     return keys[key_name];
