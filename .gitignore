@@ -10,3 +10,6 @@ output/*
 auth0-server.sublime-workspace
 .env
 azure.err
+server.cert
+server.key
+

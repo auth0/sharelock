@@ -27,7 +27,9 @@ var strategy = new Auth0Strategy({
     domain: process.env.AUTH0_DOMAIN,
     clientID: process.env.AUTH0_CLIENT_ID,
     clientSecret: process.env.AUTH0_CLIENT_SECRET,
-    callbackURL: process.env.AUTH0_CALLBACK
+    callbackURL: process.env.AUTH0_CALLBACK,
+    redirectUri: process.env.AUTH0_CALLBACK,    // <!-- upgrade to Lock 9 -->
+    scope: "openid email profile"                       // <!-- upgrade to Lock 9 -->
 }, function(accessToken, refreshToken, extraParams, profile, done) {
     // accessToken is the token to call Auth0 API (not needed in the most cases)
     // extraParams.id_token has the JSON Web Token
@@ -82,11 +84,13 @@ app.use(function (req, res, next) {
 
 if (process.env.FORCE_HTTPS === '1') {
     logger.info('turning on HTTPS enforcement');
+    if (!process.env.AUTH0_CALLBACK.includes('https')) logger.error('AUTH0_CALLBACK must be https when FORCE_HTTPS is on');
+
     app.use(function (req, res, next) {
-        if (req.protocol === 'https' || req.headers['x-arr-ssl'] || req.headers['x-forwarded-proto'] === 'https')
-            next();
+        if (req.protocol === 'https'|| req.headers['x-arr-ssl'] || req.headers['x-forwarded-proto'] === 'https') {
+            next();}
         else
-            return res.redirect('https://' + req.host + req.url);
+            {return res.redirect('https://' + req.hostname + req.url);}
     });
 }
 
@@ -320,7 +324,7 @@ function v1_get() {
         res.set('Cache-Control', 'no-cache');
 
         logger.info({ user: req.user ? req.user._json : undefined }, 'sharelock access request');
-
+        typeof req.user !== 'undefined' ? req.user.provider=req.user._json.sub.match("^.*\\|")[0].replace("\|", "") : 'undefined';
         if (req.user && req.user.provider !== 'twitter' && !req.user._json.email_verified) {
             return res.render('invalid', { details: 'Your e-mail has not been verified'});
         }
@@ -340,8 +344,8 @@ function v1_get() {
 
         try {
             tokens[0] = base64url.toBase64(tokens[0]); // signature
-            tokens[1] = new Buffer(base64url.toBase64(tokens[1]), 'base64'); // encrypted data
-            tokens[2] = new Buffer(base64url.toBase64(tokens[2]), 'base64'); // iv
+            tokens[1] = new Buffer.from(base64url.toBase64(tokens[1]), 'base64'); // encrypted data
+            tokens[2] = new Buffer.from(base64url.toBase64(tokens[2]), 'base64'); // iv
             var signature = crypto.createHmac('sha256', request_keys.signature_key).update(tokens[1]).update(tokens[2]).digest('base64');
             if (!cryptiles.fixedTimeComparison(signature, tokens[0]))
                 throw null;
@@ -393,7 +397,7 @@ function v1_get() {
                 }
             }
             else if (acl.k === 't') {
-                if (req.user && req.user.provider === 'twitter' && req.user._json.screen_name.toLowerCase() === acl.v) {
+                if (req.user && req.user.provider === 'twitter' && req.user._json.nickname.toLowerCase() === acl.v) {
                     allowed = true;
                 }
                 else {
@@ -482,8 +486,8 @@ function ensure_key(key_name) {
         if (!process.env['SIGNATURE_KEY_' + key_name] || !process.env['ENCRYPTION_KEY_' + key_name])
             throw new Error('Cryptographic credentials are not available.');
         keys[key_name] = {
-            signature_key: new Buffer(process.env['SIGNATURE_KEY_' + process.env.CURRENT_KEY], 'hex'),
-            encryption_key: new Buffer(process.env['ENCRYPTION_KEY_' + process.env.CURRENT_KEY], 'hex')
+            signature_key: new Buffer.from(process.env['SIGNATURE_KEY_' + process.env.CURRENT_KEY], 'hex'),
+            encryption_key: new Buffer.from(process.env['ENCRYPTION_KEY_' + process.env.CURRENT_KEY], 'hex')
         };
     }
     return keys[key_name];
