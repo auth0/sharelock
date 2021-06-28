@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
-    <title>arrow</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Content" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g sketch:type="MSArtboardGroup" transform="translate(-496.000000, -1425.000000)" id="arrow" fill="#EB5424">
-            <path d="M496,1425 L499.5,1430 L503,1425 L496,1425 Z" sketch:type="MSShapeGroup"></path>
-        </g>
-    </g>
-</svg>
+<svg height="5" viewBox="0 0 7 5" width="7" xmlns="http://www.w3.org/2000/svg"><path d="m496 1425 3.5 5 3.5-5z" fill="#eb5424" fill-rule="evenodd" transform="translate(-496 -1425)"/></svg>

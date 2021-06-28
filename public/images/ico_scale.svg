@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="19px" height="22px" viewBox="0 0 19 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>Shape</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Android" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Your-Secret-Data" sketch:type="MSArtboardGroup" transform="translate(-307.000000, -471.000000)" fill="#000000">
-            <g id="fab-+-ic_content_copy_24px" sketch:type="MSLayerGroup" transform="translate(289.000000, 454.000000)">
-                <g id="ic_content_copy_24px" transform="translate(16.000000, 16.000000)" sketch:type="MSShapeGroup">
-                    <path fill="#ffffff" d="M16,1 L4,1 C2.9,1 2,1.9 2,3 L2,17 L4,17 L4,3 L16,3 L16,1 L16,1 Z M19,5 L8,5 C6.9,5 6,5.9 6,7 L6,21 C6,22.1 6.9,23 8,23 L19,23 C20.1,23 21,22.1 21,21 L21,7 C21,5.9 20.1,5 19,5 L19,5 Z M19,21 L8,21 L8,7 L19,7 L19,21 L19,21 Z" id="Shape"></path>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg height="22" viewBox="0 0 19 22" width="19" xmlns="http://www.w3.org/2000/svg"><path d="m16 1h-12c-1.1 0-2 .9-2 2v14h2v-14h12zm3 4h-11c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-11v-14h11z" fill="#fff" fill-rule="evenodd" transform="translate(-2 -1)"/></svg>

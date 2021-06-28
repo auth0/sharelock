@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="152px" height="168px" viewBox="0 0 152 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
-    <title>badge</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="badge" sketch:type="MSLayerGroup" fill="#EB5424">
-            <g id="Page-1" sketch:type="MSShapeGroup">
-                <g id="badge">
-                    <g id="Clipped">
-                        <path d="M120.127,135.861 L103.277,83.997 L147.384,51.952 L92.863,51.952 L76.011,0.09 L76.006,0.076 L130.536,0.076 L147.391,51.947 L147.391,51.946 L147.405,51.938 C157.195,82.03 147.113,116.256 120.127,135.861 L120.127,135.861 L120.127,135.861 Z M31.893,135.861 L31.879,135.871 L75.998,167.924 L120.127,135.862 L76.012,103.808 L31.893,135.861 L31.893,135.861 Z M4.624,51.939 L4.624,51.939 C-5.68,83.66 6.281,117.272 31.884,135.867 L31.888,135.851 L48.74,83.99 L4.642,51.951 L59.15,51.951 L76.003,0.089 L76.007,0.075 L21.474,0.075 L4.624,51.939 L4.624,51.939 Z" id="Shape"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="152" height="168" viewBox="0 0 152 168" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>badge</title><desc>Created with Sketch.</desc><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="badge" fill="#EB5424"><g id="Page-1"><g id="badge"><g id="Clipped"><path d="M120.127,135.861 L103.277,83.997 L147.384,51.952 L92.863,51.952 L76.011,0.09 L76.006,0.076 L130.536,0.076 L147.391,51.947 L147.391,51.946 L147.405,51.938 C157.195,82.03 147.113,116.256 120.127,135.861 L120.127,135.861 L120.127,135.861 Z M31.893,135.861 L31.879,135.871 L75.998,167.924 L120.127,135.862 L76.012,103.808 L31.893,135.861 L31.893,135.861 Z M4.624,51.939 L4.624,51.939 C-5.68,83.66 6.281,117.272 31.884,135.867 L31.888,135.851 L48.74,83.99 L4.642,51.951 L59.15,51.951 L76.003,0.089 L76.007,0.075 L21.474,0.075 L4.624,51.939 L4.624,51.939 Z" id="Shape"/></g></g></g></g></g></svg>
