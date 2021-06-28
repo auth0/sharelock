@@ -222,18 +222,34 @@ function current_create() {
     var version_prefix = '/' + process.env.CURRENT_KEY + '/';
 
     return function (req, res, next) {
+
+        var acceptHeader = req.headers['accept'];
+        var acceptsJSON =  acceptHeader != undefined && acceptHeader.includes('json');
+
         if (!req.body.d)
             req.body.d = req.query.d;
         if (!req.body.a)
             req.body.a = req.query.a;
         if (typeof req.body.d !== 'string' || req.body.d.length === 0)
-            return res.status(400).send('Missing data to secure. Use `d` parameter.');
+            if (acceptsJSON)
+                return res.status(400).json({error: 'ERR001', message: 'Missing data to secure. Use `d` parameter.'});
+            else
+                return res.status(400).send('Missing data to secure. Use `d` parameter.');
         if (req.body.d.length > 500)
-            return res.status(400).send('Data too large. Max 500 characters.');
+            if (acceptsJSON)
+                return res.status(400).json({error: 'ERR002', message: 'Data too large. Max 500 characters.'});
+            else
+                return res.status(400).send('Data too large. Max 500 characters.');
         if (typeof req.body.a !== 'string' || req.body.a.length === 0)
-            return res.status(400).send('Missing ACLs. Use `a` parameter.');
+            if (acceptsJSON)
+                return res.status(400).json({error: 'ERR003', message: 'Missing ACLs. Use `a` parameter.'});
+            else
+                return res.status(400).send('Missing ACLs. Use `a` parameter.');
         if (req.body.a.length > 200)
-            return res.status(400).send('ACLs too long. Max 200 characters.');
+            if (acceptsJSON)
+                return res.status(400).json({error: 'ERR004', message: 'ACLs too long. Max 200 characters.'});
+            else
+                return res.status(400).send('ACLs too long. Max 200 characters.');
 
         var resource = {
             d: req.body.d,
@@ -288,11 +304,17 @@ function current_create() {
                 continue;
             }
 
-            return res.status(400).send('I don\'t understand what `' + token + '` means. You can say `@johnexample` for Twitter handle, `john@example.com` for e-mail address, or `@example.com` for e-mail domain.');
+            if (acceptsJSON)
+                return res.status(400).json({error: 'ERR005', message: 'I don\'t understand what `' + token + '` means. You can say `@johnexample` for Twitter handle, `john@example.com` for e-mail address, or `@example.com` for e-mail domain.'});
+            else
+                return res.status(400).send('I don\'t understand what `' + token + '` means. You can say `@johnexample` for Twitter handle, `john@example.com` for e-mail address, or `@example.com` for e-mail domain.');
         }
 
         if (resource.a.length === 0)
-            return res.status(400).send('At least one person allowed to access the secret must be specified.');
+            if (acceptsJSON)
+                return res.status(400).json({error: 'ERR006', message: 'At least one person allowed to access the secret must be specified.'});
+            else
+                return res.status(400).send('At least one person allowed to access the secret must be specified.');
 
         var plaintext = JSON.stringify(resource);
         var iv = crypto.randomBytes(16);
@@ -311,7 +333,10 @@ function current_create() {
                 split_resource += '/';
         }
 
-        res.status(200).send(split_resource);
+        if (acceptsJSON)
+            res.status(200).json({link: split_resource});
+        else
+            res.status(200).send(split_resource);
     };
 }
 
