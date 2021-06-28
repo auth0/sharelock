@@ -1,4 +1,4 @@
-require('dotenv').load();
+require('dotenv').config();
 
 [
 'CURRENT_KEY',
